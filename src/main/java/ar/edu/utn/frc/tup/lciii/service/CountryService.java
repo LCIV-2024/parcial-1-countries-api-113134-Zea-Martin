@@ -107,8 +107,10 @@ public class CountryService {
         List<Country> countries = getAllCountries();
         Country countryWithMoreBorders = countries.get(0);
         for (Country country : countries) {
-            if (country.getBorders().size() > countryWithMoreBorders.getBorders().size()) {
-                countryWithMoreBorders = country;
+            if (country.getBorders() != null) {
+                if (country.getBorders().size() > countryWithMoreBorders.getBorders().size()) {
+                    countryWithMoreBorders = country;
+                }                ;
             }
         }
         return mapToDTO(countryWithMoreBorders);

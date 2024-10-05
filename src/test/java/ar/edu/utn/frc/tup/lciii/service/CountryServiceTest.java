@@ -75,7 +75,7 @@ class CountryServiceTest {
 
     @Test
     void mapToDTO() {
-        Country country = new Country("Argentina", 45195777, 2780400.0, "ARG", "Americas", null, null);
+        Country country = new Country("Argentina", 45376763, 2780400, "ARG", "Americas", null, null);
         CountryDTO countryDTO = countryService.mapToDTO(country);
         assertEquals("ARG", countryDTO.getCode());
         assertEquals("Argentina", countryDTO.getName());
